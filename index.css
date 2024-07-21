@@ -10,7 +10,7 @@ i {
     font-size: 50px;
     cursor: pointer;
     position: absolute;
-    top: 5%;
+    top: 2%;
     right: 4%;
     color: #D4AFB9;
 }
@@ -87,10 +87,10 @@ h3 {
 
 p {
     font-weight: 400;
-    font-size: 20px;
+    font-size: 18px;
     color: #353535;
     text-align: center;
-    white-space: nowrap;
+    white-space: wrap;
 }
 
 /* Dark mode styles */
