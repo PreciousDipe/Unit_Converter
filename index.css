@@ -87,10 +87,10 @@ h3 {
 
 p {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 18px;
     color: #353535;
     text-align: center;
-    white-space: nowrap;
+    white-space: wrap;
 }
 
 /* Dark mode styles */
