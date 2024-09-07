@@ -41,5 +41,4 @@ jobs:
       run: |
         netlify deploy \
           --site ${{ secrets.NETLIFY_SITE_ID }} \
-          --auth ${{ secrets.NETLIFY_API_TOKEN }} \
-          --staging
+          --auth ${{ secrets.NETLIFY_API_TOKEN }} 
