@@ -19,5 +19,5 @@ The pipeline is defined in the `.github/workflows/ci-pipeline.yaml`, which trigg
    - The next steps uses npm to install the dependencies, builds the application and runs unit tests for functions in the applications
 
 3. **Deploy**:
-   - I created another Github-hosted ubuntu runner for the deploy job, because in github actions when using github hosted runners, jobs runs on different runners.
+   - I created another Github-hosted ubuntu runner for the deploy job, because in github actions when using github hosted runners, jobs runs on different runners
    - I used the needs keyword and the condition that only when the build_and_test job is successful the deploy job should run, this ensures that all jobs must pass for the workflow to be sucessful
