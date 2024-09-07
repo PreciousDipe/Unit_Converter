@@ -38,7 +38,7 @@ jobs:
 
     - name: Link Netlify
       run: | 
-        netlify link --site ${{ secrets.NETLIFY_SITE_ID }}
+        netlify link 
 
     - name: Deploy to Staging
       id: netlify_deploy
