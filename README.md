@@ -10,8 +10,8 @@ The pipeline is defined in the `.github/workflows/ci-pipeline.yaml`, which trigg
 
 ### Pipeline Jobs
 
-1. **Build Process**:
-   - I used Github-hosted ubuntu runner for the build job because i am familar with working with ubuntu
+1. **build_and_test Process**:
+   - I used Github-hosted ubuntu runner for the build_and_test job because i am familar with working with ubuntu
    - I created steps some steps to run on the runner
    - My first step was using the checkout action to fetch the latest version of the code from the repository
    - Then I used the setup-node@v4 action to setup Nodejs on my runner, i used version 4 because it is compartible with node version 18 which is the version to was used for creating the application
@@ -20,4 +20,4 @@ The pipeline is defined in the `.github/workflows/ci-pipeline.yaml`, which trigg
 
 3. **Deploy**:
    - I created another Github-hosted ubuntu runner for the deploy job, because in github actions when using github hosted runners, jobs runs on different runners.
-   - I used the needs keyword and the condition that only when the build job is successful the deploy job should run, this ensures that all jobs must pass for the workflow to be sucessful
+   - I used the needs keyword and the condition that only when the build_and_test job is successful the deploy job should run, this ensures that all jobs must pass for the workflow to be sucessful
