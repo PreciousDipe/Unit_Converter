@@ -36,10 +36,13 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v4
 
+    - name: Link Netlify
+      run: | 
+        netlify link --site ${{ secrets.NETLIFY_SITE_ID }}
+
     - name: Deploy to Staging
       id: netlify_deploy
       run: |
         netlify deploy \
           --dir dist \  
-          --site ${{ secrets.NETLIFY_SITE_ID }} \
           --auth ${{ secrets.NETLIFY_API_TOKEN }} 
