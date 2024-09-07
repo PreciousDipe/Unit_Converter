@@ -1,6 +1,6 @@
 # Unit Converter Pipeline
 
-This repository contains a Node.js application automated using **GitHub Actions** to create a ci/cd pipeline. The pipeline automates the process of build, test, and deploy processes of the application to a staging environment on .
+This repository contains a Node.js application automated using **GitHub Actions** to create a ci/cd pipeline. The pipeline automates the process of build, test, and deploy processes of the application to a staging environment on Netlify .
 
 ## CI/CD Pipeline Overview
 
