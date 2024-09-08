@@ -24,12 +24,6 @@ jobs:
     - name: Build Project
       run: npm run build
 
-    - name: Upload build artifacts
-      uses: actions/upload-artifact@v3
-      with:
-        name: build-artifacts
-        path: dist
-
     - name: Run Unit Tests
       run: npm test
 
@@ -42,15 +36,10 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v4
 
-    - name: Download build artifacts
-      uses: actions/download-artifact@v3
-      with:
-        name: build-artifacts
-
     - name: Deploy to Staging
       uses: nwtgck/actions-netlify@v3.0
       with:
-        publish-dir: './dist'
+        publish-dir: '.'
         production-branch: main
         github-token: ${{ secrets.GITHUB_TOKEN }}
         deploy-message: "Deployed from GitHub Actions"
