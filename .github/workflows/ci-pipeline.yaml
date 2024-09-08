@@ -24,6 +24,12 @@ jobs:
     - name: Build Project
       run: npm run build
 
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: build-artifacts
+        path: dist
+
     - name: Run Unit Tests
       run: npm test
 
@@ -35,6 +41,11 @@ jobs:
     steps:
     - name: Checkout Code
       uses: actions/checkout@v4
+
+    - name: Download build artifacts
+      uses: actions/download-artifact@v3
+      with:
+        name: build-artifacts
 
     - name: Deploy to Staging
       uses: nwtgck/actions-netlify@v3.0
