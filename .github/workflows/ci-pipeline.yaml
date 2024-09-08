@@ -39,7 +39,6 @@ jobs:
     - name: Deploy to Staging
       uses: nwtgck/actions-netlify@v3.0
       with:
-        publish-dir: 'dist'
         production-branch: main
         github-token: ${{ secrets.GITHUB_TOKEN }}
         deploy-message: "Deployed from GitHub Actions"
