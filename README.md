@@ -1,5 +1,5 @@
 # Unit Converter Pipeline
-![status badge](https://github.com/PreciousDipe/Unit_Converter/tree/main/.github/workflows/ci-pipeline.yaml/badge.svg)
+![status badge](https://github.com/PreciousDipe/Unit_Converter/actions/workflows/ci-pipeline.yaml/badge.svg)
 
 This repository contains a Node.js application automated using **GitHub Actions** to create a ci/cd pipeline. The pipeline automates the process of build, test, and deploy processes of the application to a staging environment on Netlify .
 
