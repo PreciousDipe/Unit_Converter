@@ -36,13 +36,13 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v4
 
-    - name: Link Netlify
-      run: | 
-        netlify link 
-
     - name: Deploy to Staging
-      id: netlify_deploy
-      run: |
-        netlify deploy \
-          --dir dist \  
-          --auth ${{ secrets.NETLIFY_API_TOKEN }} 
+      uses: nwtgck/actions-netlify@v3.0
+      with:
+        publish-dir: 'dist'
+        production-branch: main
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        deploy-message: "Deployed from GitHub Actions"
+      env:
+        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_API_TOKEN }}
+        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
