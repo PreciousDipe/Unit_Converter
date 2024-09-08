@@ -22,6 +22,6 @@ The pipeline is defined in the `.github/workflows/ci-pipeline.yaml`, which trigg
 2. **Deploy**:
    - I created another GitHub-hosted Ubuntu runner for the deploy job because, when using GitHub-hosted runners, jobs run on different machines.
    - I used the needs keyword to ensure the deploy job only runs if the build_and_test job is successful. This way, the deployment only happens if everything passes in the previous steps.
-   - For deployment, I used Netlify. I set up the Netlify action from the GitHub Marketplace, which requires my Netlify personal access token and site ID to authenticate and deploy the application.
+   - For deployment, I used Netlify. I set up the Netlify action from the GitHub Marketplace, which requires my Netlify personal access token and site ID to authenticate and deploy the application, I used GitHub secrets to securely store those credentials and configured the workflow to reference them during the deployment process.
   
 You can view the live application here: [Unit Converter App](https://myunitconverters.netlify.app)
